@@ -11,7 +11,7 @@ import org.junit.Assert.*
 class BibliotecaTest {
 
     @Test
-    fun `validar que un usuario no pueda tener mas de 3 libros`() {
+    fun `ValidarQueUnUsuarioNoPuedaTenerMasDe3Libros`() {
         // Preparación
         val validador = Loanvalidator()
         val listaLibros = mutableListOf<Book>() // Catálogo vacío para la prueba
@@ -38,7 +38,7 @@ class BibliotecaTest {
 
 
     @Test
-    fun `no debe prestar un libro que ya no esta disponible`() {
+    fun `NoDebePrestarUnLibroQueYaNoEstaDisponible`() {
         val validador = Loanvalidator()
         val libro = Book("Kotlin para Expertos", "Autor X", "999")
         val sistema = Librarysystem(listOf(libro), validador)
@@ -57,7 +57,7 @@ class BibliotecaTest {
 
 
     @Test
-    fun `mostrar libros disponibles en consola`() {
+    fun `MostrarLibrosdisponiblesenconsola`() {
         val validador = Loanvalidator()
         val libro1 = Book("Kotlin Clean Code", "Robert C.", "101", disponible = true)
         val libro2 = Book("Android Avanzado", "Google Professional", "102", disponible = false)
